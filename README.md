@@ -38,6 +38,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Contact
 Sanket Bhuite
-Email: sanketbhuite76245@gmail.com
-LinkedIn: Sanket Bhuite
+Email: work.sanketbhuite@outlook.com
+LinkedIn: sanketbhuite
 GitHub: sanketbhuite
