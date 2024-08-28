@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
      <link rel="icon" href="ii1.png" sizes="32x32" type="image/png">
     <style>
         body {
+            cursor: url("cursor.png"), auto;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -317,7 +319,16 @@
         footer p {
             margin-top: 10px;
         }
+          .form-container {
+            background-color: transparent;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 50%;
+            margin-top: -10px;
+        }
 
+     
         @media (min-width: 768px) {
             #home {
                 flex-direction: row;
@@ -451,7 +462,7 @@
         <img src="pic.png" alt="Sanket Bhuite's Photo" class="profile-photo">
         <div1 class="form-container">
         <h2>GET IN TOUCH WITH ME :)</h2>
-        <p>Write your Review, Response or Thougth on My Portfolio Website...
+        <p>write your Review, Response or Thougth on my Portfolio Website...
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="29561d38-b49f-410f-a763-275b741e5f46">
             <input type="text" name="name" placeholder="Your Name" required>
@@ -462,7 +473,6 @@
         </form>
     </div1> 
     </section>
-
     <section id="projects">
         <h2>Projects</h2>
         <ul>
