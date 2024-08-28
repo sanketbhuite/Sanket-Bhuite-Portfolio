@@ -7,6 +7,7 @@
      <link rel="icon" href="ii1.png" sizes="32x32" type="image/png">
     <style>
         body {
+            cursor: url("D:\sanket(bcs)\codes\html_project\index.html\sanket resume\portfolio\cursor.png"), auto;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -107,7 +108,53 @@
             text-decoration: none;
             font-size: 18px;
         }
-  
+         .form-container h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: #ffffff1f;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #5b9bd5;
+            outline: none;
+            box-shadow: 0 0 5px rgba(91, 155, 213, 0.5);
+        }
+
+        button {
+            background-color: #4a7d8c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3a7bbf;
+        }
+
+        .hidden {
+            display: none;
+        }
+
         #projects h2 {
             font-size: 24px;
             text-align: center;
@@ -412,7 +459,20 @@
             </div>
         </div>
         <img src="pic.png" alt="Sanket Bhuite's Photo" class="profile-photo">
+        <div1 class="form-container">
+        <h2>GET IN TOUCH WITH ME :)</h2>
+        <p>write your Review, Response or Thougth on my Portfolio Website...
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="29561d38-b49f-410f-a763-275b741e5f46">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <input type="checkbox" name="botcheck" class="hidden">
+            <button type="submit">Submit Form</button>
+        </form>
+    </div1> 
     </section>
+      
     <section id="projects">
         <h2>Projects</h2>
         <ul>
@@ -421,10 +481,10 @@
 <p>Pratik Pol Photography is a personal portfolio website showcasing the photographic works of Pratik Pol. This project aims to create an engaging and visually appealing platform for displaying a diverse range of photography, highlighting the artist's unique perspective and style.</p>
                 <a href="https://sanketbhuite.github.io/pratik-pol-photography/" class="github-link">🐱 View on GitHub</a>
             </li>
-             <li>
-                <span class="project-title">Iphone Calculator clone:</span>
-                <p>iPhone calculator clone built using HTML, CSS, and JavaScript. This project was a fun way to challenge myself and enhance my frontend development skills while mimicking the clean and intuitive design of the iOS calculator.</p>
-                <a href="https://sanketbhuite.github.io/iPhone-calculator-clone/" class="github-link">🐱 View on GitHub</a>
+            <li>
+                <span class="project-title">Resume Maker:</span>
+                <p>A user-friendly, customizable resume-building application designed to help users create professional resumes with ease. This project is built with modern web technologies and offers a variety of templates and formatting options to cater to different industry needs.</p>
+                <a href="https://sanketbhuite.github.io/resume-making/" class="github-link">🐱 View on GitHub</a>
             </li>
             <li>
                 <span class="project-title">Notepad Application:</span>
@@ -439,11 +499,6 @@
                 <span class="project-title">Student Information managemant System:<br><br></span> Student Information Management System This Python script allows you to manage student information by providing options to add, read, search, update, and delete student records. The data is stored in a text file (student_info.txt)<br> 
                 <a href="https://github.com/sanketbhuite/Student-Information-Management-System" class="github-link">🐱View on GitHub</a> 
             </li> 
-             <li>
-                <span class="project-title">Resume Maker:</span>
-                <p>A user-friendly, customizable resume-building application designed to help users create professional resumes with ease. This project is built with modern web technologies and offers a variety of templates and formatting options to cater to different industry needs.</p>
-                <a href="https://sanketbhuite.github.io/resume-making/" class="github-link">🐱 View on GitHub</a>
-            </li>
             <li> 
                 <span class="project-title">Typing Speed Test:<br><br></span> Typing Speed Test This Python script allows users to test their typing speed by typing a specific text and calculates the words per minute (WPM) based on their input speed. Features: Calculates typing speed in words per minute (WPM). Provides immediate feedback on accuracy of typed text.<br> 
                 <a href="https://github.com/sanketbhuite/Typing-Speed-Test" class="github-link">🐱View on GitHub</a> 
