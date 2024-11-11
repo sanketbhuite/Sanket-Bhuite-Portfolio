@@ -305,8 +305,10 @@ body {
             color: #333;
         }
 
-        footer p {
+        footer #license {
             margin-top: 10px;
+            color: white;
+            text-decoration: none;        
         }
 
         footer img{
