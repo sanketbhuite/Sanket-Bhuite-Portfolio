@@ -267,8 +267,7 @@ body {
 #summary #activities .act {
     display: contents;   
 }   
-     
-        footer {
+       footer {
             text-align: center;
             padding: 20px 0;
             background: #333;
@@ -308,6 +307,11 @@ body {
 
         footer p {
             margin-top: 10px;
+        }
+
+        footer img{
+            width:140px;
+            height: auto;
         }
           .form-container {
             background-color: transparent;
