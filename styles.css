@@ -467,4 +467,11 @@ body {
      width: 47%;
     display: inline-block;   
 }
+       footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+        }
         }
