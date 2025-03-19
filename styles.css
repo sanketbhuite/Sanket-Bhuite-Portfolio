@@ -46,25 +46,28 @@ body {
             flex-direction: column;
         }
 
+
         .container {
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 350px;
+            height: 350px;
+            margin: 40px 0 40px 0;
         }
         .image {
-            position: relative;
+            position: relative; 
             width: 100%;
             height: 100%;
         }
         .image img {
-            margin: -125px 0 0 52px;
+            width: 350px;
+            margin: -116px 0 0 21px;
             border-bottom-left-radius: 48%;
-            border-bottom-right-radius: 60%;
+            border-bottom-right-radius: 68%;
         }
         .circle {
             position: absolute;
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
             background-color: white;
             border-radius: 50%;
             place-self: anchor-center;
@@ -288,6 +291,7 @@ body {
             padding: 20px 0;
             background: #333;
             color: #fff;
+            width: 100%;
         }
 
         footer .contact-icons {
@@ -367,11 +371,31 @@ body {
         }
 
 
-            .profile-photo {
-                width: 620px;
-                margin-right: 120px;
-            }
-
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .image img {
+            width: 86%;
+            margin: -121px 0 0 62px;
+            border-bottom-left-radius: 57%;
+            border-bottom-right-radius: 78%;
+        }
+        .circle {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: white;
+            border-radius: 50%;
+            place-self: anchor-center;
+        }
+ */
        #certifications .certificates {
     display: flex;
     flex-wrap: wrap;
