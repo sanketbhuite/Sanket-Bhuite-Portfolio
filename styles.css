@@ -46,12 +46,28 @@ body {
             flex-direction: column;
         }
 
-        .profile-photo {
-            display: block;
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .image {
+            position: relative;
             width: 100%;
-            max-width: 650px;
-            margin: 20px auto;
-            height: auto;
+            height: 100%;
+        }
+        .image img {
+            margin: -125px 0 0 52px;
+            border-bottom-left-radius: 48%;
+            border-bottom-right-radius: 60%;
+        }
+        .circle {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: white;
+            border-radius: 50%;
+            place-self: anchor-center;
         }
 
         #home {
@@ -426,4 +442,5 @@ body {
 #summary #activities .act {
      width: 47%;
     display: inline-block;   
-}            
+}
+        }
