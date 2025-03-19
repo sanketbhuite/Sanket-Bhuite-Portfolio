@@ -41,7 +41,7 @@ body {
 
         section {
             padding: 20px;
-            margin: 20px 0;
+            margin: -20px 0;
             display: none; 
             flex-direction: column;
         }
@@ -291,7 +291,7 @@ body {
             padding: 20px 0;
             background: #333;
             color: #fff;
-            width: 100%;
+            width: 107%;
         }
 
         footer .contact-icons {
