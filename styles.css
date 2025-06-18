@@ -59,9 +59,9 @@ body {
             height: 100%;
         }
         .image img {
-            width: 350px;
-            margin: -116px 0 0 21px;
-            border-bottom-left-radius: 48%;
+            width: 283px;
+            margin: -46px 0 0 13px;
+            border-bottom-left-radius: 57%;
             border-bottom-right-radius: 68%;
         }
         .circle {
@@ -382,9 +382,9 @@ body {
             height: 100%;
         }
         .image img {
-            width: 86%;
-            margin: -121px 0 0 62px;
-            border-bottom-left-radius: 57%;
+            width: 66%;
+            margin: -10px 0 0 93px;
+            border-bottom-left-radius: 68%;
             border-bottom-right-radius: 78%;
         }
         .circle {
@@ -395,7 +395,7 @@ body {
             border-radius: 50%;
             place-self: anchor-center;
         }
- */
+ 
        #certifications .certificates {
     display: flex;
     flex-wrap: wrap;
