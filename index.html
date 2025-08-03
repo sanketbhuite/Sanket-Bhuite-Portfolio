@@ -6,8 +6,84 @@
     <title>Sanket Bhuite's Portfolio</title>
      <link rel="icon" href="ii1.png" sizes="32x32" type="image/png">
      <link rel="stylesheet" href="styles.css" >
+    <style>
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal {
+    background: white;
+    padding: 20px;
+    max-width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .modal h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .modal p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+
+  .modal a {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+
+  .modal a:hover {
+    background: #0056b3;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
 </head>
 <body>
+<!-- new website box -->
+<div id="newPortfolioModal" class="modal-overlay">
+  <div class="modal">
+    <h2>🚀 New Portfolio is Live!</h2>
+    <p>Check out my brand new portfolio website.</p>
+    <a href="https://myself-sanket.netlify.app" target="_blank">Visit Now</a>
+  </div>
+</div>
+<script>
+  window.addEventListener("load", () => {
+    const modal = document.getElementById("newPortfolioModal");
+    modal.addEventListener("click", () => modal.style.display = "none");
+  });
+</script>
+<!-- new website box -->
     <header>
         <nav>
             <ul>
@@ -477,3 +553,4 @@ Active member contributing to the growth and development of basketball in the Sa
 <script src="scripts.js"> </script> 
 </body> 
 </html> 	
+
