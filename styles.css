@@ -157,10 +157,6 @@ body {
             transition: background-color 0.3s;
         }
 
-        button:hover {
-            background-color: #3a7bbf;
-        }
-
         .hidden {
             display: none;
         }
