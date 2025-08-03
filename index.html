@@ -6,84 +6,111 @@
     <title>Sanket Bhuite's Portfolio</title>
      <link rel="icon" href="ii1.png" sizes="32x32" type="image/png">
      <link rel="stylesheet" href="styles.css" >
-    <style>
+<!--     new website box-->
+<style>
   .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(3px);
     z-index: 9999;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInBg 0.3s ease-in-out;
   }
 
   .modal {
-    background: white;
-    padding: 20px;
-    max-width: 350px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 28px;
+    width: 350px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.3s ease-in-out;
+    position: relative;
   }
 
   .modal h2 {
+    font-size: 22px;
     margin-bottom: 10px;
-    font-size: 20px;
-    color: #333;
+    color: #007a7a;
+    font-weight: 600;
   }
 
   .modal p {
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #555;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 18px;
+    line-height: 1.5;
   }
 
   .modal a {
-    background: #007bff;
+    background: linear-gradient(135deg, #07ce91, #00b37a);
     color: white;
+    padding: 10px 22px;
+    border-radius: 10px;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: background 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: inline-block;
   }
 
   .modal a:hover {
-    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(7, 206, 145, 0.4);
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .close-btn:hover {
+    color: #555;
+  }
+
+  @keyframes fadeInBg {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 </head>
 <body>
-<!-- new website box -->
+<!-- new website box-->
 <div id="newPortfolioModal" class="modal-overlay">
   <div class="modal">
+    <button class="close-btn" onclick="closeModal()">✕</button>
     <h2>🚀 New Portfolio is Live!</h2>
-    <p>Check out my brand new portfolio website.</p>
+    <p>I’ve launched my new portfolio with a cleaner design, faster load times, and updated projects.</p>
     <a href="https://myself-sanket.netlify.app" target="_blank">Visit Now</a>
   </div>
 </div>
 <script>
+  function closeModal() {
+    document.getElementById("newPortfolioModal").style.display = "none";
+  }
+
   window.addEventListener("load", () => {
-    const modal = document.getElementById("newPortfolioModal");
-    modal.addEventListener("click", () => modal.style.display = "none");
+    setTimeout(() => {
+      document.getElementById("newPortfolioModal").style.display = "flex";
+    }, 500); 
   });
 </script>
-<!-- new website box -->
     <header>
         <nav>
             <ul>
@@ -553,4 +580,5 @@ Active member contributing to the growth and development of basketball in the Sa
 <script src="scripts.js"> </script> 
 </body> 
 </html> 	
+
 
