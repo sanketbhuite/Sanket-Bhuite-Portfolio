@@ -6,119 +6,24 @@
     <title>Sanket Bhuite's Portfolio</title>
      <link rel="icon" href="ii1.png" sizes="32x32" type="image/png">
      <link rel="stylesheet" href="styles.css" >
-<!--     new website box-->
-<style>
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(3px);
-    z-index: 9999;
-    font-family: 'Poppins', sans-serif;
-    animation: fadeInBg 0.3s ease-in-out;
-  }
-
-  .modal {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 28px;
-    width: 350px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-    animation: slideUp 0.3s ease-in-out;
-    position: relative;
-  }
-
-  .modal h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #007a7a;
-    font-weight: 600;
-  }
-
-  .modal p {
-    font-size: 15px;
-    color: #333;
-    margin-bottom: 18px;
-    line-height: 1.5;
-  }
-
-  .modal a {
-    background: linear-gradient(135deg, #07ce91, #00b37a);
-    color: white;
-    padding: 10px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    display: inline-block;
-  }
-
-  .modal a:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(7, 206, 145, 0.4);
-  }
-
-  .close-btn {
-    position: absolute;
-    width: 65px;
-    top: 5px;
-    right: 1px;
-    background: transparent;
-    border: none;
-    font-size: 20px;
-    color: #888;
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-  .close-btn:hover {
-    color: #555;
-  }
-
-  @keyframes fadeInBg {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
 </head>
 <body>
 <!-- new website box-->
 <div id="newPortfolioModal" class="modal-overlay">
   <div class="modal">
-    <button class="close-btn" onclick="closeModal()">✕</button>
-    <h2>🚀 New Portfolio is Live!</h2>
-    <p>I’ve launched my new portfolio with a cleaner design, faster load times, and updated projects.</p>
+    <button class="close-btn" onclick="closeModal()">&#10005;</button>
+    <h2>&#128640; New Portfolio is Live!</h2>
+    <p>I've launched my new portfolio with a cleaner design, faster load times, and updated projects.</p>
     <a href="https://myself-sanket.netlify.app" target="_blank">Visit Now</a>
   </div>
 </div>
-<script>
-  function closeModal() {
-    document.getElementById("newPortfolioModal").style.display = "none";
-  }
-
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.getElementById("newPortfolioModal").style.display = "flex";
-    }, 500); 
-  });
-</script>
     <header>
         <nav>
             <ul>
-                <li><a href="#" onclick="showSection('home')">Home</a></li>
-                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-                <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
-                <li><a href="#" onclick="showSection('summary')">About</a></li>
+                <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+                <li><a href="#summary" class="nav-link" data-section="summary">About</a></li>
             </ul>
         </nav>
     </header>
@@ -128,12 +33,12 @@
             <h1>Hi there,<br>I'm Sanket Bhuite</h1>
             <p>Welcome to my portfolio website. I'm a Computer Science student with a passion for web development, programming, and technology.</p>
             <div class="contact-icons">
-                <a href="mailto:work.sanketbhuite@outlook.com" title="Work Email">📧</a>
-                <a href="tel:9022394903" title="Phone">📞</a>
-                <a href="https://linkedin.com/in/sanketbhuite" title="LinkedIn">🔗</a>
-                <a href="https://github.com/sanketbhuite" title="GitHub">🐱</a>
-                <a href="https://x.com/SanketBhuite" title="x">✖️</a>
-                <a href="CV1.pdf" download title="Download Resume">📄</a>
+                <a href="mailto:work.sanketbhuite@outlook.com" title="Work Email">&#128231;</a>
+                <a href="tel:9022394903" title="Phone">&#128222;</a>
+                <a href="https://linkedin.com/in/sanketbhuite" title="LinkedIn">&#128279;</a>
+                <a href="https://github.com/sanketbhuite" title="GitHub">&#128049;</a>
+                <a href="https://x.com/SanketBhuite" title="x">&#10060;</a>
+                <a href="CV1.pdf" download title="Download Resume">&#128196;</a>
             </div>
         </div>
         <div class="container">
@@ -144,8 +49,7 @@
                 </div>
             </div>
         </div>
-        </div>
-        <div1 class="form-container">
+        <div class="form-container">
         <h2>GET IN TOUCH WITH ME :)</h2>
         <p>You can share your review, response, or thoughts on my portfolio website...</p>
         <form action="https://api.web3forms.com/submit" method="POST">
@@ -156,337 +60,277 @@
             <input type="checkbox" name="botcheck" class="hidden">
             <button type="submit">Submit Form</button>
         </form>
-    </div1> 
+    </div>
     </section>
-      
+
    <section id="projects">
         <h2>Projects</h2>
         <ul>
 	     <li>
                 <span class="project-title">TalkMate:</span>
 <p>TalkMate is a web-based virtual English tutor that helps users improve their spoken English by having natural conversations. It listens to your speech, corrects mistakes, gives grammar tips, and replies like a real friend.</p>
-                <a href="https://github.com/sanketbhuite/TalkMate-v1.0" class="github-link">🐱 View on GitHub</a>
+                <a href="https://github.com/sanketbhuite/TalkMate-v1.0" class="github-link">&#128049; View on GitHub</a>
             </li>
             <li>
                 <span class="project-title">NotesHub:</span>
 <p>NotesHub is a simple full-stack web application built using PHP and MySQL that allows users to upload and download study notes. It features user login, file upload functionality, and a clean, minimal interface. The project aims to simplify note-sharing among students. I collaborated with friends to complete and deploy this educational tool successfully.</p>
-                <a href="https://github.com/shivamnanavare/NotesHub-v0" class="github-link">🐱 View on GitHub</a>
+                <a href="https://github.com/shivamnanavare/NotesHub-v0" class="github-link">&#128049; View on GitHub</a>
             </li>
 	    <li>
                 <span class="project-title">Photography Webpage:</span>
 <p>Pratik Pol Photography is a personal portfolio website showcasing the photographic works of Pratik Pol. This project aims to create an engaging and visually appealing platform for displaying a diverse range of photography, highlighting the artist's unique perspective and style.</p>
-                <a href="https://sanketbhuite.github.io/pratik-pol-photography/" class="github-link">🐱 View on GitHub</a>
+                <a href="https://sanketbhuite.github.io/pratik-pol-photography/" class="github-link">&#128049; View on GitHub</a>
             </li>
 
              <li>
                 <span class="project-title">Iphone Calculator clone:</span>
                 <p>iPhone calculator clone built using HTML, CSS, and JavaScript. This project was a fun way to challenge myself and enhance my frontend development skills while mimicking the clean and intuitive design of the iOS calculator.</p>
-                <a href="https://sanketbhuite.github.io/iPhone-calculator-clone/" class="github-link">🐱 View on GitHub</a>
+                <a href="https://sanketbhuite.github.io/iPhone-calculator-clone/" class="github-link">&#128049; View on GitHub</a>
             </li>
             <li>
                 <span class="project-title">Notepad Application:</span>
-                <p>A simple web-based Notepad application that allows users to write, save, open and run HTML/JavaScript code. Features include a large text area for writing, buttons for saving and opening .txt files, and an iframe to display code output. Built with HTML5, CSS3, and JavaScript, this project offers a clean and user-friendly interface<br> 
-                <a href="https://sanketbhuite.github.io/Simple-web-based-Notepad/" class="github-link">🐱View on GitHub</a> 
-            </li> 
-            <li> 
-                <span class="project-title">Currency Converter:</span><br><br> Currency Converter Welcome to the Currency Converter repository! This project provides a robust and easy-to-use tool for converting between various currencies. Whether you're a developer looking to integrate currency conversion into your application or a user needing quick conversion calculations, this repository has you covered.<br> 
-                <a href="https://github.com/sanketbhuite/Currency-Convertor" class="github-link">🐱View on GitHub</a> 
-            </li> 
-            <li> 
-                <span class="project-title">Student Information managemant System ( PYTHON ) :<br><br></span> Student Information Management System This Python script allows you to manage student information by providing options to add, read, search, update, and delete student records. The data is stored in a text file (student_info.txt)<br> 
-                <a href="https://github.com/sanketbhuite/Student-Information-Management-System" class="github-link">🐱View on GitHub</a> 
+                <p>A simple web-based Notepad application that allows users to write, save, open and run HTML/JavaScript code. Features include a large text area for writing, buttons for saving and opening .txt files, and an iframe to display code output. Built with HTML5, CSS3, and JavaScript, this project offers a clean and user-friendly interface<br>
+                <a href="https://sanketbhuite.github.io/Simple-web-based-Notepad/" class="github-link">&#128049;View on GitHub</a>
             </li>
-            <li> 
-                <span class="project-title">Student Information managemant System ( PHP ) :<br><br></span>This repository contains two implementations of a simple Student Information Management System, one in PHP and the other in Python. Both versions provide functionality to manage student records including adding, updating, deleting, searching, and displaying student data stored in a plain text file. <br> 
-                <a href="https://github.com/sanketbhuite/Student-Information-Management-System-PHP" class="github-link">🐱View on GitHub</a> 
-            </li>            
+            <li>
+                <span class="project-title">Currency Converter:</span><br><br> Currency Converter Welcome to the Currency Converter repository! This project provides a robust and easy-to-use tool for converting between various currencies. Whether you're a developer looking to integrate currency conversion into your application or a user needing quick conversion calculations, this repository has you covered.<br>
+                <a href="https://github.com/sanketbhuite/Currency-Convertor" class="github-link">&#128049;View on GitHub</a>
+            </li>
+            <li>
+                <span class="project-title">Student Information managemant System ( PYTHON ) :<br><br></span> Student Information Management System This Python script allows you to manage student information by providing options to add, read, search, update, and delete student records. The data is stored in a text file (student_info.txt)<br>
+                <a href="https://github.com/sanketbhuite/Student-Information-Management-System" class="github-link">&#128049;View on GitHub</a>
+            </li>
+            <li>
+                <span class="project-title">Student Information managemant System ( PHP ) :<br><br></span>This repository contains two implementations of a simple Student Information Management System, one in PHP and the other in Python. Both versions provide functionality to manage student records including adding, updating, deleting, searching, and displaying student data stored in a plain text file. <br>
+                <a href="https://github.com/sanketbhuite/Student-Information-Management-System-PHP" class="github-link">&#128049;View on GitHub</a>
+            </li>
              <li>
                 <span class="project-title">Resume Maker:</span>
                 <p>A user-friendly, customizable resume-building application designed to help users create professional resumes with ease. This project is built with modern web technologies and offers a variety of templates and formatting options to cater to different industry needs.</p>
-                <a href="https://sanketbhuite.github.io/resume-making/" class="github-link">🐱 View on GitHub</a>
+                <a href="https://sanketbhuite.github.io/resume-making/" class="github-link">&#128049; View on GitHub</a>
             </li>
-            <li> 
-                <span class="project-title">Typing Speed Test:<br><br></span> Typing Speed Test This Python script allows users to test their typing speed by typing a specific text and calculates the words per minute (WPM) based on their input speed. Features: Calculates typing speed in words per minute (WPM). Provides immediate feedback on accuracy of typed text.<br> 
-                <a href="https://github.com/sanketbhuite/Typing-Speed-Test" class="github-link">🐱View on GitHub</a> 
-            </li> 
-            <li> 
-                <span class="project-title">Number Guessing Game:<br><br></span> Number Guessing Game... This is a simple command-line number guessing game implemented in Python. In this game, the computer randomly selects a number between 1 and 100, and the user has 10 attempts to guess the number. After each guess, the program provides feedback on whether the guess is too high, too low, or correct.<br> 
-                <a href="https://github.com/sanketbhuite/Number-guessing-game" class="github-link">🐱View on GitHub</a> 
-            </li> 
-            <li> 
+            <li>
+                <span class="project-title">Typing Speed Test:<br><br></span> Typing Speed Test This Python script allows users to test their typing speed by typing a specific text and calculates the words per minute (WPM) based on their input speed. Features: Calculates typing speed in words per minute (WPM). Provides immediate feedback on accuracy of typed text.<br>
+                <a href="https://github.com/sanketbhuite/Typing-Speed-Test" class="github-link">&#128049;View on GitHub</a>
+            </li>
+            <li>
+                <span class="project-title">Number Guessing Game:<br><br></span> Number Guessing Game... This is a simple command-line number guessing game implemented in Python. In this game, the computer randomly selects a number between 1 and 100, and the user has 10 attempts to guess the number. After each guess, the program provides feedback on whether the guess is too high, too low, or correct.<br>
+                <a href="https://github.com/sanketbhuite/Number-guessing-game" class="github-link">&#128049;View on GitHub</a>
+            </li>
+            <li>
                 <span class="project-title">Personal Expense Tracker:<br><br></span> Personal Expense Tracker This Python program is a simple personal expense tracker that allows users to manage and view their expenses effectively. we can Add Expense: Enter details for a new expense, including category, amount, and description. The expense is appended to a text file for persistent storage.
 View Expenses: Display all recorded expenses in a formatted manner.
-View Summary: Show a summary of expenses categorized by type with the total amount spent in each category.<br> 
-                <a href="https://github.com/sanketbhuite/Personal-Expense-Tracker" class="github-link">🐱View on GitHub</a> 
-            </li> 
-        </ul> 
-        <h1>Stay Tuned, Many More to go...😊</h1>
-    </section> 
-    
-   <section id="certifications"> 
-    <h2>Certifications</h2> 
-    <div class="certificates"> 
-        <div class="certificate-item"> 
-           
-                <img src="c1.jpg" alt="Certificate -2"> 
-           
-            <div class="certificate-description"> 
-                <h3>LinkedIn | Microsoft</h3> 
+View Summary: Show a summary of expenses categorized by type with the total amount spent in each category.<br>
+                <a href="https://github.com/sanketbhuite/Personal-Expense-Tracker" class="github-link">&#128049;View on GitHub</a>
+            </li>
+        </ul>
+        <h1>Stay Tuned, Many More to go...&#128522;</h1>
+    </section>
+
+   <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certificates">
+        <div class="certificate-item">
+                <img src="c1.jpg" alt="Certificate -2">
+            <div class="certificate-description">
+                <h3>LinkedIn | Microsoft</h3>
                 <p>Career Essentials in Cybersecurity by Microsoft and LinkedIn</p>
-<a href="https://www.linkedin.com/learning/certificates/082d807928aad1a8108be54b597eb0075fc5d17dc289a0793547d8fea986a4f1" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
-            
-                <img src="c2.jpg" alt="Certificate -1"> 
-       
-            <div class="certificate-description"> 
-                  <h3>LinkedIn | Microsoft</h3> 
-                <p>Cybersecurity Awareness: Cybersecurity Terminology</p> 
-                <a href="https://www.linkedin.com/learning/certificates/7a857a2825420f5fa1671f14163c6d6bd741ac698b3502cb0ef134bf04c65aae" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
-           
-                <img src="c3.jpg" alt="Certificate 0"> 
-            
-            <div class="certificate-description"> 
-                <h3>LinkedIn | Microsoft</h3> 
-                <p>Cybersecurity Foundations</p> 
-                <a href="https://www.linkedin.com/learning/certificates/57dbeecf322596b47341aa0179617f4d10a1dc1d0f9a8634dd51f5f40c9123d7" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificates"> 
-        <div class="certificate-item"> 
-           
-                <img src="c4.jpg" alt="Certificate 1"> 
-           
-            <div class="certificate-description"> 
-                 <h3>LinkedIn | Microsoft</h3> 
-                <p>Microsoft Copilot for Security</p> 
-                <a href="https://www.linkedin.com/learning/certificates/8ce7992067f32343e9e23c22a82d1bca061e26eefadc382c47fbc371f2861b80" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-
-        <div class="certificate-item"> 
-            
-                <img src="c5.jpg" alt="Certificate 2"> 
-      
-            <div class="certificate-description"> 
-                  <h3>LinkedIn | Microsoft</h3> 
-                <p>The Cybersecurity Threat Landscape</p> 
-                <a href="https://www.freecodecamp.org/certification/sanketbhuite/foundational-c-sharp-with-microsoft" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
-            
-                <img src="ci6.jpeg" alt="Certificate 3"> 
-           
-            <div class="certificate-description"> 
-                <h3>FreecodeCamp | Microsoft</h3> 
-                <p> Foundational C# with Microsoft </p> 
-                <a href="https://www.jobaajlearnings.com/certificate?file=certificate-156706-37-0.jpeg" target="_blank">View credential</a>  
-            </div> 
-        </div> 
-
-
-
-<div class="certificates"> 
-        <div class="certificate-item"> 
-            
-     <img src="c19.jpg" alt="Certificate 4"> 
-           
-            <div class="certificate-description"> 
-                <h3>udemy</h3> 
-                <p>PHP with MySQL</p> 
-                <a href="https://www.udemy.com/certificate/UC-a4c4f7c0-d4de-4862-9400-0ce568ff70dc/" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
-                <img src="c20.jpg" alt="Certificate 5"> 
-             
-            <div class="certificate-description">
-                 <h3>udemy</h3> 
-                <p>CSS, Bootstrap, JavaScript, and PHP Stack Complete Course</p> 
-                <a href="https://www.udemy.com/certificate/UC-c39450de-39c3-4205-b581-8c6a6941e4b6/">View credential</a>  
-                
+<a href="https://www.linkedin.com/learning/certificates/082d807928aad1a8108be54b597eb0075fc5d17dc289a0793547d8fea986a4f1" target="_blank">View credential</a>
             </div>
-</div> 
-        <div class="certificate-item"> 
- 
-                <img src="c21.jpeg" alt="Certificate 6"> 
-             
-            <div class="certificate-description"> 
-                <h3>AWS | Forage</h3> 
-                <p>Solutions Architecture Job Simulation</p> 
-                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_uZxpDDWr5fxfTLYr4_1731242007193_completion_certificate.pdf" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-<div class="certificates"> 
-        <div class="certificate-item"> 
-          
-                <img src="c7.jpg" alt="Certificate 7"> 
-           
-            <div class="certificate-description"> 
-                <h3>MasterCard | Forage</h3> 
-                <p>Cybersecurity Job Simulation</p> 
-                <a href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_Mastercard_uZxpDDWr5fxfTLYr4_1714402946864_completion_certificate.pdf" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
-                <img src="c6.jpg" alt="Certificate 8"> 
-             
-            <div class="certificate-description">
-                 <h3>TATA | Forage</h3> 
-                <p>Cybersecurity Analyst Job Simulation</p> 
-                <a href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/gmf3ypEXBj2wvfQWC_Tata%20Group_uZxpDDWr5fxfTLYr4_1711798930102_completion_certificate.pdf" target="_blank">View credential</a>  
-                
-            </div>
-</div> 
-        <div class="certificate-item"> 
- 
-                <img src="c16.jpg" alt="Certificate 9"> 
-             
-            <div class="certificate-description"> 
-                <h3>Accenture | Forage</h3> 
-                <p>Data Analytics and Visualization Job Simulation</p> 
-                <a href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_uZxpDDWr5fxfTLYr4_1719768253701_completion_certificate.pdf" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-    
-<div class="certificates"> 
-        <div class="certificate-item"> 
-      
-                <img src="c10.jpg" alt="Certificate 10"> 
-          
-            <div class="certificate-description"> 
-                <h3>HackerRank</h3> 
-                <p>CSS (Basic)</p> 
-                <a href="https://www.hackerrank.com/certificates/64968e4747f9" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
-             
-                <img src="c11.jpg" alt="Certificate 11"> 
-             
-            <div class="certificate-description"> 
-                <h3>HackerRank</h3> 
-                <p>Python (Basic) </p> 
-                <a href="https://www.hackerrank.com/certificates/e5e05df39480" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
-    
-                <img src="c12.jpg" alt="Certificate 12"> 
-             
-            <div class="certificate-description"> 
-                <h3>HackerRank</h3> 
-                <p>JavaScript (Basic)</p> 
-                <a href="https://www.hackerrank.com/certificates/db4dd2f83476" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-<div class="certificates"> 
-        <div class="certificate-item"> 
-            
-                <img src="c13.jpg" alt="Certificate 13"> 
-             
-            <div class="certificate-description"> 
-                <h3>SimpliLearn </h3> 
-                <p>Getting Python Interview Ready</p> 
-                <a href="https://simpli-web.app.link/e/cg1PFnx9BKb" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
- 
-                <img src="c14.jpg" alt="Certificate 14"> 
-             
-            <div class="certificate-description"> 
-                  <h3>SimpliLearn</h3> 
-                <p>Introduction to Robotic Process Automation (RPA)</p> 
-                <a href="https://simpli-web.app.link/e/yS6vzTA9BKb" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-        <div class="certificate-item"> 
- 
-                <img src="ci2.jpeg" alt="Certificate 15"> 
-             
-            <div class="certificate-description"> 
-                <h3>SimpliLearn | Google Cloud</h3> 
-                <p>Trust and Security with Google Cloud</p> 
-                <a href="https://simpli-web.app.link/e/JMazSq7XALb" target="_blank">View credential</a>  
-            </div> 
-        </div> 
-    <div class="certificate-item"> 
- 
-                <img src="c8.png" alt="Certificate 16"> 
-             
-            <div class="certificate-description"> 
-                <h3>Great Learning</h3> 
-                <p>Python for Machine Learning and Data Science</p> 
-                <a href="https://olympus.mygreatlearning.com/courses/86169/certificate" target="_blank">View credential</a>  
-            </div> 
-        </div> 
-
-    <div class="certificate-item"> 
- 
-                <img src="c9.jpg" alt="Certificate 17"> 
-             
-            <div class="certificate-description"> 
-                <h3>Great Learnings</h3> 
-                <p>Introduction to Cyber Security</p> 
-                <a href="https://olympus.mygreatlearning.com/courses/12628/certificate" target="_blank">View credential</a>
-            </div> 
         </div>
+        <div class="certificate-item">
+                <img src="c2.jpg" alt="Certificate -1">
+            <div class="certificate-description">
+                  <h3>LinkedIn | Microsoft</h3>
+                <p>Cybersecurity Awareness: Cybersecurity Terminology</p>
+                <a href="https://www.linkedin.com/learning/certificates/7a857a2825420f5fa1671f14163c6d6bd741ac698b3502cb0ef134bf04c65aae" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c3.jpg" alt="Certificate 0">
+            <div class="certificate-description">
+                <h3>LinkedIn | Microsoft</h3>
+                <p>Cybersecurity Foundations</p>
+                <a href="https://www.linkedin.com/learning/certificates/57dbeecf322596b47341aa0179617f4d10a1dc1d0f9a8634dd51f5f40c9123d7" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c4.jpg" alt="Certificate 1">
+            <div class="certificate-description">
+                 <h3>LinkedIn | Microsoft</h3>
+                <p>Microsoft Copilot for Security</p>
+                <a href="https://www.linkedin.com/learning/certificates/8ce7992067f32343e9e23c22a82d1bca061e26eefadc382c47fbc371f2861b80" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c5.jpg" alt="Certificate 2">
+            <div class="certificate-description">
+                  <h3>LinkedIn | Microsoft</h3>
+                <p>The Cybersecurity Threat Landscape</p>
+                <a href="https://www.freecodecamp.org/certification/sanketbhuite/foundational-c-sharp-with-microsoft" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="ci6.jpeg" alt="Certificate 3">
+            <div class="certificate-description">
+                <h3>FreecodeCamp | Microsoft</h3>
+                <p> Foundational C# with Microsoft </p>
+                <a href="https://www.jobaajlearnings.com/certificate?file=certificate-156706-37-0.jpeg" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+     <img src="c19.jpg" alt="Certificate 4">
+            <div class="certificate-description">
+                <h3>udemy</h3>
+                <p>PHP with MySQL</p>
+                <a href="https://www.udemy.com/certificate/UC-a4c4f7c0-d4de-4862-9400-0ce568ff70dc/" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c20.jpg" alt="Certificate 5">
+            <div class="certificate-description">
+                 <h3>udemy</h3>
+                <p>CSS, Bootstrap, JavaScript, and PHP Stack Complete Course</p>
+                <a href="https://www.udemy.com/certificate/UC-c39450de-39c3-4205-b581-8c6a6941e4b6/">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c21.jpeg" alt="Certificate 6">
+            <div class="certificate-description">
+                <h3>AWS | Forage</h3>
+                <p>Solutions Architecture Job Simulation</p>
+                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_uZxpDDWr5fxfTLYr4_1731242007193_completion_certificate.pdf" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c7.jpg" alt="Certificate 7">
+            <div class="certificate-description">
+                <h3>MasterCard | Forage</h3>
+                <p>Cybersecurity Job Simulation</p>
+                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_Mastercard_uZxpDDWr5fxfTLYr4_1714402946864_completion_certificate.pdf" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c6.jpg" alt="Certificate 8">
+            <div class="certificate-description">
+                 <h3>TATA | Forage</h3>
+                <p>Cybersecurity Analyst Job Simulation</p>
+                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/gmf3ypEXBj2wvfQWC_Tata%20Group_uZxpDDWr5fxfTLYr4_1711798930102_completion_certificate.pdf" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c16.jpg" alt="Certificate 9">
+            <div class="certificate-description">
+                <h3>Accenture | Forage</h3>
+                <p>Data Analytics and Visualization Job Simulation</p>
+                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_uZxpDDWr5fxfTLYr4_1719768253701_completion_certificate.pdf" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c10.jpg" alt="Certificate 10">
+            <div class="certificate-description">
+                <h3>HackerRank</h3>
+                <p>CSS (Basic)</p>
+                <a href="https://www.hackerrank.com/certificates/64968e4747f9" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c11.jpg" alt="Certificate 11">
+            <div class="certificate-description">
+                <h3>HackerRank</h3>
+                <p>Python (Basic) </p>
+                <a href="https://www.hackerrank.com/certificates/e5e05df39480" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c12.jpg" alt="Certificate 12">
+            <div class="certificate-description">
+                <h3>HackerRank</h3>
+                <p>JavaScript (Basic)</p>
+                <a href="https://www.hackerrank.com/certificates/db4dd2f83476" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c13.jpg" alt="Certificate 13">
+            <div class="certificate-description">
+                <h3>SimpliLearn </h3>
+                <p>Getting Python Interview Ready</p>
+                <a href="https://simpli-web.app.link/e/cg1PFnx9BKb" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c14.jpg" alt="Certificate 14">
+            <div class="certificate-description">
+                  <h3>SimpliLearn</h3>
+                <p>Introduction to Robotic Process Automation (RPA)</p>
+                <a href="https://simpli-web.app.link/e/yS6vzTA9BKb" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="ci2.jpeg" alt="Certificate 15">
+            <div class="certificate-description">
+                <h3>SimpliLearn | Google Cloud</h3>
+                <p>Trust and Security with Google Cloud</p>
+                <a href="https://simpli-web.app.link/e/JMazSq7XALb" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c8.png" alt="Certificate 16">
+            <div class="certificate-description">
+                <h3>Great Learning</h3>
+                <p>Python for Machine Learning and Data Science</p>
+                <a href="https://olympus.mygreatlearning.com/courses/86169/certificate" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c9.jpg" alt="Certificate 17">
+            <div class="certificate-description">
+                <h3>Great Learnings</h3>
+                <p>Introduction to Cyber Security</p>
+                <a href="https://olympus.mygreatlearning.com/courses/12628/certificate" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="ci1.jpeg" alt="Certificate 18">
+            <div class="certificate-description">
+                <h3>YBI Foundation</h3>
+                <p>Python programming Internship</p>
+                <a href="https://www.ybifoundation.org/certificate-validation?credentialId=WRTF00RVYXUJ8" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="ci4.jpeg" alt="Certificate 19">
+            <div class="certificate-description">
+                <h3>Udemy</h3>
+                <p>2025 Data Visualization in Tableau &amp; Python</p>
+                <a href="https://www.udemy.com/certificate/UC-02c1f846-eaf4-415f-8c33-06c145057c96/" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="c15.jpeg" alt="Certificate 6">
+            <div class="certificate-description">
+                <h3>jobaaj</h3>
+                <p>Data Analytics with Specialisation in Tableau Workshop</p>
+                <a href="https://www.jobaajlearnings.com/certificate?file=certificate-156706-37-0.jpeg" target="_blank">View credential</a>
+            </div>
+        </div>
+        <div class="certificate-item">
+                <img src="ci3.jpeg" alt="Certificate 19">
+            <div class="certificate-description">
+                <h3>be10x</h3>
+                <p>AI Tools and ChatGPT Workshop</p>
+                <a href="https://certx.in/certificate/9318e7f9-0234-4ea4-9390-efad88624b8b137154" target="_blank">View credential</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <div class="certificate-item"> 
- 
-                <img src="ci1.jpeg" alt="Certificate 18"> 
-             
-            <div class="certificate-description"> 
-                <h3>YBI Foundation</h3> 
-                <p>Python programming Internship</p> 
-                <a href="https://www.ybifoundation.org/certificate-validation?credentialId=WRTF00RVYXUJ8" target="_blank">View credential</a> 
-            </div> 
-        </div> 
-    <div class="certificate-item"> 
-            
-                <img src="ci4.jpeg" alt="Certificate 19"> 
-           
-            <div class="certificate-description"> 
-                <h3>Udemy</h3> 
-                <p>2025 Data Visualization in Tableau & Python</p> 
-                <a href="https://www.udemy.com/certificate/UC-02c1f846-eaf4-415f-8c33-06c145057c96/" target="_blank">View credential</a>  
-            </div> 
-        </div> 
-    <div class="certificate-item"> 
-            
-                <img src="c15.jpeg" alt="Certificate 6"> 
-           
-            <div class="certificate-description"> 
-                <h3>jobaaj</h3> 
-                <p>Data Analytics with Specialisation in Tableau Workshop</p> 
-                <a href="https://www.jobaajlearnings.com/certificate?file=certificate-156706-37-0.jpeg" target="_blank">View credential</a>  
-            </div> 
-        </div> 
-    <div class="certificate-item"> 
-            
-                <img src="ci3.jpeg" alt="Certificate 19"> 
-           
-            <div class="certificate-description"> 
-                <h3>be10x</h3> 
-                <p>AI Tools and ChatGPT Workshop</p> 
-                <a href="https://certx.in/certificate/9318e7f9-0234-4ea4-9390-efad88624b8b137154" target="_blank">View credential</a>  
-            </div> 
-        </div> 
-    </div> 
-</section> 
- 
- 
- 
-      <section id="summary"> 
-        <h1>About</h1> 
-         <div id="Recognition"> 
-            <h2>Skills :</h2>  
+
+
+      <section id="summary">
+        <h1>About</h1>
+         <div id="Recognition">
+            <h2>Skills :</h2>
 <div class="internship">
 <p><b>Programming languages :</b><img src="logo1.png">
 </div>
@@ -496,16 +340,16 @@ View Summary: Show a summary of expenses categorized by type with the total amou
 </div>
 <div class="internship" style="border:unset;">
 
-  <ul><h3>Soft Skills:</h3><li>Team collaboration</li><li>Project management</li><li>Time management</li></ul> 
+  <ul><h3>Soft Skills:</h3><li>Team collaboration</li><li>Project management</li><li>Time management</li></ul>
 
 </div> <div class="internship" style="border:unset;">
 
- <ul><h3>Additional Skills:</h3><li>Data Analysis</li><li>Team Leader</li><li>Presence of Mind</li></ul> 
+ <ul><h3>Additional Skills:</h3><li>Data Analysis</li><li>Team Leader</li><li>Presence of Mind</li></ul>
  </ul> </div>
- </div> 
-        <div id="Recognition"> 
-            <h2>Recognition :</h2> 
-            <h3>Internship :</h3>  
+ </div>
+        <div id="Recognition">
+            <h2>Recognition :</h2>
+            <h3>Internship :</h3>
 <div class="internship">
 <p><b>YBI Foundation :</b><br><b>Certificate of Completion : August 2024</b><br>completed the Python Programming Internship with YBI Foundation. This experience allowed me to deepen my programming knowledge and actively contribute to various projects. I demonstrated strong dedication and a high level of professionalism throughout the program. </p>
 <img src="ci1.jpeg" style="padding: 58px 0 58px 0px;">
@@ -517,41 +361,41 @@ View Summary: Show a summary of expenses categorized by type with the total amou
 </div>
 <p><b>Dexter Innofest 2023-24 National Level Competition :</b>
 <div class="dexter">
-<b>First Prize in Programming Competition, March 7th, 2024</b><br><b>Organized By: </b>Punyashlok Ahilyadevi Holkar Solapur University, Solapur, School of Computational Sciences, Department of Computer Science & Computer Applications<br>Awarded First Prize in the National Level Programming Competition as part of "Dexter Innofest 2023-24." Demonstrated exceptional programming skills and innovative problem-solving abilities in a competitive setting. The competition highlighted proficiency in advanced programming concepts and effective application of computational techniques.
+<b>First Prize in Programming Competition, March 7th, 2024</b><br><b>Organized By: </b>Punyashlok Ahilyadevi Holkar Solapur University, Solapur, School of Computational Sciences, Department of Computer Science &amp; Computer Applications<br>Awarded First Prize in the National Level Programming Competition as part of "Dexter Innofest 2023-24." Demonstrated exceptional programming skills and innovative problem-solving abilities in a competitive setting. The competition highlighted proficiency in advanced programming concepts and effective application of computational techniques.
 .</p>
 <img src="dexter.jpeg">
 </div>
-        </div> 
-  
-        <div id="education"> 
-            <h2>Education :</h2> 
+        </div>
+
+        <div id="education">
+            <h2>Education :</h2>
 <div class="clg">
-            <h3>B.Sc in Entire Computer Science :</h3>  
+            <h3>B.Sc in Entire Computer Science :</h3>
 <b>Sangola College, Sangola affiliated to Punyashlok Ahilya Devi Holkar University, Solapur. <br>Expected Graduation: 2025-26.</b>
 <p>Engaged in an intensive Bachelor of Science (B.Sc) program in Entire Computer Science, with a curriculum that combines theoretical knowledge with hands-on experience in cutting-edge technologies. This program is designed to equip students with essential skills in programming and software development.</p>
 <img src="scs.jpg">
 </div>
 <div class="clg">
-<h3>Higher Secondory School(HSC/SSC) :</h3> 
-<b> <i>Sangola Taluka Shikshan Prasarak Mandal's</i> Sangola Vidyamandir, Sangola<br>Year: 2015-16 to 2022-23.</b> 
+<h3>Higher Secondory School(HSC/SSC) :</h3>
+<b> <i>Sangola Taluka Shikshan Prasarak Mandal's</i> Sangola Vidyamandir, Sangola<br>Year: 2015-16 to 2022-23.</b>
 <p>Completed HSC/SSC at STSPM's Sangola Vidyamandir, Sangola, from 2015-16 to 2022-23. This foundational education provided a strong base in various subjects, fostering critical thinking and problem-solving skills essential for further studies in computer science.</p>
 <img src="svm.jpg">
 </div>
-<h3>Relevant Coursework: </h3> 
- <ul> 
-  <li>Data Structures and Algorithms</li><li>Database Management Systems</li><li>Software Engineering</li><li>Machine Learning Fundamentals</li><li>Information Security</li></ul> 
-        </div> 
- 
-        <div id="activities"> 
+<h3>Relevant Coursework: </h3>
+ <ul>
+  <li>Data Structures and Algorithms</li><li>Database Management Systems</li><li>Software Engineering</li><li>Machine Learning Fundamentals</li><li>Information Security</li></ul>
+        </div>
+
+        <div id="activities">
             <h2>Extracurricular Activities :</h2>
-<div class="act"> 
+<div class="act">
 <h3>Division Level Basketball Player :</h3>
-            <ul><li>First Prize Winner – District-Level Basketball Competition 
-Achieved first place in a highly competitive district-level basketball tournament.</li> 
-<li>Member, Sangola Taluka Basketball Association 
+            <ul><li>First Prize Winner &ndash; District-Level Basketball Competition
+Achieved first place in a highly competitive district-level basketball tournament.</li>
+<li>Member, Sangola Taluka Basketball Association
 Active member contributing to the growth and development of basketball in the Sangola Taluka region.</li>
 <li><a href="https://mandootexpress.com/?p=2146" >Mandoot Express (
-जिल्हास्तरीय बास्केटबॉल स्पर्धेत सांगोला विद्यामंदिरचे दैदिप्यमान यश -)</a> </li>
+&#2332;&#2367;&#2354;&#2381;&#2361;&#2366;&#2360;&#2381;&#2340;&#2352;&#2368;&#2351; &#2348;&#2366;&#2360;&#2381;&#2325;&#2375;&#2335;&#2348;&#2377;&#2354; &#2360;&#2381;&#2346;&#2352;&#2381;&#2343;&#2375;&#2340; &#2360;&#2366;&#2306;&#2327;&#2379;&#2354;&#2366; &#2357;&#2367;&#2342;&#2381;&#2351;&#2366;&#2350;&#2306;&#2342;&#2367;&#2352;&#2330;&#2375; &#2342;&#2376;&#2342;&#2368;&#2346;&#2381;&#2351;&#2350;&#2366;&#2344; &#2351;&#2358; -)</a> </li>
 <img src="bb1.jpeg">
 </div>
 <div class="act">
@@ -561,26 +405,22 @@ Active member contributing to the growth and development of basketball in the Sa
 <li>Frist Prize in Drill, Organized by 38 MAH battalion  at Solapur. </li>
 <li>Led and trained junior cadets, developing leadership, discipline, and teamwork skills.</li>
 <li>Participated in verious drills, camps, and national-level events, demonstrating commitment and excellence.</li>
-<img src="ncc1.jpg"></ul> 
+<img src="ncc1.jpg"></ul>
 </div>
-</div> 
-</section> 
- 
-<footer> 
-    <ul class="contact-icons"> 
-        <li><a href="tel:9022394903" title="Phone"><span class="icon">📞</span></a></li> 
-        <li><a href="https://www.instagram.com/sanket.bhuite/" title="Instagram"><span class="icon">📷</span></a></li> 
-        <li><a href="https://www.facebook.com/sanketbhuite07/" title="Facebook"><span class="icon">📘</span></a></li> 
-        <li><a href="mailto:sanketbhuite75245@gmail.com" title="Contact Email"><span class="icon">📧</span></a></li> 
-    </ul> 
+</div>
+</section>
+
+<footer>
+    <ul class="contact-icons">
+        <li><a href="tel:9022394903" title="Phone"><span class="icon">&#128222;</span></a></li>
+        <li><a href="https://www.instagram.com/sanket.bhuite/" title="Instagram"><span class="icon">&#128247;</span></a></li>
+        <li><a href="https://www.facebook.com/sanketbhuite07/" title="Facebook"><span class="icon">&#128216;</span></a></li>
+        <li><a href="mailto:sanketbhuite75245@gmail.com" title="Contact Email"><span class="icon">&#128231;</span></a></li>
+    </ul>
     <a id="license" href="https://github.com/sanketbhuite/Sanket-Bhuite-Portfolio/blob/main/LICENSE">All rights reserved | Sanket Bhuite</a><br>
-    <img src="80x15.png" placeholder="copyright"> 
-</footer> 
- 
- 
-<script src="scripts.js"> </script> 
-</body> 
-</html> 	
+    <img src="80x15.png" placeholder="copyright">
+</footer>
 
-
-
+<script src="scripts.js"></script>
+</body>
+</html>
