@@ -8,6 +8,95 @@ body {
             background-position: center;
         }
 
+        /* ---- New portfolio announcement modal ---- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            display: none;              /* hidden until JS reveals it */
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(3px);
+            z-index: 9999;
+            font-family: 'Poppins', sans-serif;
+            animation: fadeInBg 0.3s ease-in-out;
+        }
+
+        .modal-overlay.show {
+            display: flex;              /* JS toggles this class instead of inline styles */
+        }
+
+        .modal {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 28px;
+            width: 350px;
+            max-width: 85vw;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            animation: slideUp 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .modal h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #007a7a;
+            font-weight: 600;
+        }
+
+        .modal p {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .modal a {
+            background: linear-gradient(135deg, #07ce91, #00b37a);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: inline-block;
+        }
+
+        .modal a:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(7, 206, 145, 0.4);
+        }
+
+        .close-btn {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 8px;
+            right: 8px;
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .close-btn:hover {
+            color: #555;
+        }
+
+        @keyframes fadeInBg {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         header {
             background-color: transparent;
             color: #fff;
@@ -39,6 +128,11 @@ body {
             text-decoration: underline;
         }
 
+        header nav ul li a.active {
+            color: #4a7d8c;
+            text-decoration: underline;
+        }
+
         section {
             padding: 20px;
             margin: -20px 0;
@@ -53,10 +147,17 @@ body {
             height: 350px;
             margin: 40px 0 40px 0;
         }
-        .image {
-            position: relative; 
+        .circles {
+            position: relative;
             width: 100%;
             height: 100%;
+        }
+        .image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;             /* photo always paints above the circle */
         }
         .image img {
             width: 283px;
@@ -66,11 +167,12 @@ body {
         }
         .circle {
             position: absolute;
-            width: 350px;
-            height: 350px;
+            inset: 0;
+            width: 100%;
+            height: 100%;
             background-color: white;
             border-radius: 50%;
-            place-self: anchor-center;
+            z-index: 1;
         }
 
         #home {
@@ -373,9 +475,11 @@ body {
             height: 500px;
         }
         .image {
-            position: relative;
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
+            z-index: 2;
         }
         .image img {
             width: 66%;
@@ -385,11 +489,12 @@ body {
         }
         .circle {
             position: absolute;
-            width: 400px;
-            height: 400px;
+            inset: 0;
+            width: 100%;
+            height: 100%;
             background-color: white;
             border-radius: 50%;
-            place-self: anchor-center;
+            z-index: 1;
         }
  
        #certifications .certificates {
